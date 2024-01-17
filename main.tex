@@ -4,7 +4,7 @@
 \usepackage{authblk}
 \usepackage{pbalance}
 \renewcommand\Affilfont{\footnotesize\vspace{-.2mm}}
-\title{PBL型教育におけるアジャイル人材育成のプラクティス～2023年度の事例～}
+\title{PBL型教育におけるアジャイル人材育成のプラクティス:2023年度の事例}
 \newcommand{\entitle}{Practice of agile development engineers in PBL: A case in 2023}
 \author[1*]{中鉢 欣秀}
 \author[1]{大野 寛人}
@@ -15,12 +15,12 @@
 \author[1]{水野 響}
 \author[1]{宮原 大}
 \author[1*]{\authorcr\small Yoshihide Chubachi} % add \authorcr at the beginning of the first author's latin name
-\author[1]{\small Hiroto Ohno}
+\author[1]{\small Hiroto Ono}
 \author[1]{\small Maki Suzuki}
 \author[1]{\small Kento Nakayama}
 \author[1]{\small Hijiri Hirata}
 \author[1]{\small Fabianmarcelo Fernandez}
-\author[1]{\small Hibiki Mizuna}
+\author[1]{\small Hibiki Mizuno}
 \author[1]{\small Dai Miyahara}
 \affil[1]{東京都立産業技術大学院大学  Advanced Institute of Industrial Technology}
 \affil[*]{Corresponding author: Yoshihide Chubachi, yc@aiit.ac.jp}
@@ -30,9 +30,9 @@
 % import a package set
 \usepackage{aiit}
 
-% load settings for layouts and aesthetic tweaks. 
+% load settings for layouts and aesthetic tweaks.
 % comment this out to speed up compile (draft quality)
-\usepackage{aiit-aes} 
+\usepackage{aiit-aes}
 
 \begin{document}
 \input{title-abstract-keywords}
@@ -49,7 +49,7 @@
 筆者らはアジャイル開発に対応できる技術者の育成を大学におけるPBL型教育で行う取り組みを実践している\cite{中鉢1608,中鉢1609,中鉢1610,中鉢1611-el,中鉢1701,中鉢1712-AIIT,中鉢1809,中鉢2009-FIT}．これらは2012年度に始まったenPiT\cite{井上14}のビジネスアプリケーション分野\cite{嵯峨17}で大学におけるスクラムの教育から得られた知見を発展させ，実施しているものである．
 
 
-直近の事例として，2021年度の事例を文献\cite{中鉢2112,中鉢2109}に，2022年度の事例を文献\cite{中鉢2301,中鉢2209}で発表している．本論文はこれらに続く2023年度の事例であり，本年度年度前期PBL成果発表会にて学生が作成した発表資料と日本ソフトウェア科学会大会講演論文\footnote{著作権は筆者らが有する}に基づいて構成したものである．
+直近の事例として，2021年度の事例を文献\cite{中鉢2112,中鉢2109}に，2022年度の事例を文献\cite{中鉢2301,中鉢2209}で発表している．本論文はこれらに続く2023年度の事例であり，本年度前期PBL成果発表会にて学生が作成した発表資料と日本ソフトウェア科学会大会講演論文\footnote{著作権は筆者らが有する}に基づいて構成したものである．
 
 以下，2.ではプロジェクトのメンバー構成，3.ではプロダクトの決定から開発までの流れを示し，4.で考察し，5.でまとめを行う．
 
@@ -127,22 +127,22 @@ PBLは学習のメソッドであり，成果はあくまでもチームメン�
 
 今年度のチームでは目標として「個人開発スキルの向上」と「スクラムマスターの役割の習得」の2つを掲げた．個人開発スキルについては，向上度合いを可視化するため，各技術レイヤーごとに目標を設定した．
 
-スクラムマスターの役割に関しては，求められるスキルとして次の5つが知られている\footnote{\url{https://www.odd-e.jp/article\_009\_1/}}
+スクラムマスターの役割に関しては，求められるスキルとして次の5つが知られている\footnote{\url{https://www.odd-e.jp/article\_009\_1/}}．
 
 \begin{description}
 \item[{ティーチング（Teaching）}]　%% 文末の全角スペースは必要
 
 知識や技術を教え与える
-\item[{ファシリテーティング（Facilitating）}]　
+\item[{ファシリテーティング（Facilitating）}]
 
 活動（チーム活動や議論等）を促進する
-\item[{メンタリング（Mentoring）}]　
+\item[{メンタリング（Mentoring）}]
 
 対話を通じて人生観などに対する気づきを促す
-\item[{コーチング（Coaching）}]　
+\item[{コーチング（Coaching）}]
 
 問題解決や目標達成のための気づきを促す
-\item[{シチュエーショナリング（Situationaling）}]　
+\item[{シチュエーショナリング（Situationaling）}]
 
 状況を把握して対応する
 \end{description}
@@ -172,7 +172,7 @@ PBLで開発するソフトウェアを決める際には，PBLの期間内に�
 
 チームでは，ペルソナとして「28歳女性」「一人暮らしの倹約家」「趣味はショッピング」といった属性を定義し，サービスを利用するユーザとして想定した．また，MVP（Minimum Viable Product）として，「化粧品の情報を調べることができる」「化粧品が廃盤になっていることを知ることができる」「代替品を探すことができる」等とした．
 
-これらにより，プロダクトのが提供する価値についての定義がなされ，開発すべきソフトウェアの姿が明確となった．
+これらにより，プロダクトの提供する価値についての定義がなされ，開発すべきソフトウェアの姿が明確となった．
 
 \subsection{価値の確認}
 \label{sec:orgfc0adef}
@@ -200,16 +200,16 @@ PBLで開発するソフトウェアを決める際には，PBLの期間内に�
 チームではKPT方式で振り返りを行い，発生した課題と改善策について話し合った．課題としては次のものがあがり，それぞれについて対策を講じた．
 
 \begin{description} %% 文末の全角スペースは必要
-\item[{会議が長時間になる}]　
+\item[{会議が長時間になる}]
 
 各アジェンダに対して時間配分を設定し，ファシリテーションにより時間を管理する
-\item[{スケジュールが遅延する}]　
+\item[{スケジュールが遅延する}]
 
 プロダクトオーナー，スクラムマスターで定期的にスケジュールを見直す
-\item[{KPTのTRYの形骸化}]　
+\item[{KPTのTRYの形骸化}]
 
 前週のTRYを翌週に確認し，各スプリントのTRYを集約する
-\item[{メンバー間のスキル差}]　
+\item[{メンバー間のスキル差}]
 
 テックリードによるSlackでのQAやサポート
 \end{description}
@@ -342,7 +342,7 @@ tabular環境を用いた標準的な表の例を表\ref{table:tableExample}に�
 
 \begin{minted}{r}
 library(tidyverse)
-theme_aiit <- 
+theme_aiit <-
   theme_minimal(6, base_family = "Helvetica") +
   theme(
     line = element_line(linewidth = .1/.75, colour = "#545B66"),
@@ -359,26 +359,26 @@ theme_aiit <-
     legend.text = element_text(size = 6),
     legend.key.size = unit(3, units = "mm"),
     plot.tag = element_text(
-      size = 10, 
-      family = "Helvetica", 
+      size = 10,
+      family = "Helvetica",
       face = "bold"
     )
   )
 \end{minted}
 このテーマで例に示した図\ref{figure:figureExample}をプロットするには、以下のようにする。
 \begin{minted}{r}
-iris |> 
+iris |>
   ggplot(
     aes(
-      x = Sepal.Length, 
-      y = Sepal.Width, 
-      colour = Petal.Length, 
+      x = Sepal.Length,
+      y = Sepal.Width,
+      colour = Petal.Length,
       group = Species)
   ) +
   geom_smooth(
-    method = "lm", 
-    size = .3/.75, 
-    colour = "black", 
+    method = "lm",
+    size = .3/.75,
+    colour = "black",
     fill = "grey80"
   ) +
   geom_point(size = .15/.75) +
@@ -394,11 +394,11 @@ ggsave("./output/p_plot.png", width = 86, height = 60, unit ="mm", dpi = 600)
 同様に図\ref{figure:figureExampleLarge}をプロットするスクリプトは以下の通り。
 
 \begin{minted}{r}
-diamonds |> 
+diamonds |>
   ggplot(aes(carat, price, colour  = clarity)) +
   geom_point(size = .15/.75, alpha = .2) +
   geom_smooth(
-    method = "glm", 
+    method = "glm",
     method.args = list(family = gaussian(link = "log")),
     size = .2
   ) +
