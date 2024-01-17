@@ -1,0 +1,38 @@
+% AIIT Bulletin Template Version 17.9 2023-07-13; Equivalent Word template version: 5
+% overall document settings
+
+\usepackage{graphicx} % figs
+\usepackage[dvipsnames]{xcolor} % colorured background for minted
+\usepackage{minted} % code block and inline code
+\usepackage{amsmath, amssymb} % math
+\usepackage{luatexja-ruby} % ruby for japanese
+\usepackage[runin]{abstract} % better abstract
+\usepackage{booktabs} % table
+\usepackage{multirow} % table
+\usepackage{citation-style-language} % cite
+\usepackage{ragged2e} % uniform raggedright
+\graphicspath{ {./images/} }
+
+% title, author, abstract, keyword
+
+%% abstract
+
+\renewcommand{\abstractname}{Abstract}
+\abslabeldelim{\quad}
+\setlength{\absleftindent}{0pt}
+\setlength{\absrightindent}{0pt}
+\setlength{\abstitleskip}{-3mm} 
+
+%% keywords and abstract content
+\newcommand{\keywords}[1]{\small\textbf{Keywords\quad}#1}
+
+% codeblock
+% bgcolor must be set to an arbitrary color to properly color bg (default minted behavior) to prevent massive ink loss when printing
+\definecolor{manni-bg}{HTML}{f0f3f3}
+\setminted{fontsize=\footnotesize, breaklines, style=manni, bgcolor=manni-bg} 
+\setmintedinline{fontsize=\currentfontsize, breaklines, breakanywhere, bgcolor={}, style=manni}
+
+% citation using citation-style-language
+
+\cslsetup{style=plos, bib-font = \footnotesize\RaggedRight}
+\addbibresource{bibliography.bib}

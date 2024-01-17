@@ -1,0 +1,133 @@
+% AIIT Bulletin Template Version 17.9 2023-07-13; Equivalent Word template version: 5
+\usepackage{geometry}
+\usepackage{luatexja-fontspec}
+\usepackage{titling}
+\usepackage{setspace}
+\usepackage[pagestyles]{titlesec} % load before header footer; no need to load titleps separately
+
+% set constants
+\newcommand{\VOLUME}{17}
+\newcommand{\RECEIVEDDATE}{2023-10-29}
+
+% margins
+\geometry{
+    hmargin=12truemm, 
+    vmargin=18truemm
+}
+
+% typefaces
+\setsansfont[Ligatures=TeX]{TeXGyreHeros}
+\setmainfont[Ligatures=TeX]{TeXGyrePagella}
+\setmonofont{FiraMono}
+\setmainjfont[BoldFont=HaranoAjiMincho-Bold]{HaranoAjiMincho-Regular}
+\setsansjfont{HaranoAjiGothic-Medium}
+\newjfontfamily\jisninety[CJKShape=JIS1990]{HaranoAjiMincho-Regular}
+\usepackage{newpxmath}
+
+% layouts
+\setlength{\columnsep}{8mm}
+\renewcommand{\baselinestretch}{1} % for Japanese article
+
+\date{}
+
+\renewcommand\Authsep{\quad} %authblk, default ", "
+\renewcommand\Authands{\quad} %authblk
+\renewcommand\Authand{\quad} %authblk
+
+\pretitle{%
+    \vspace{3.7mm}
+    \rule{\textwidth}{.1mm}
+    \begin{flushleft}
+    \LARGE
+}
+\posttitle{%
+    \\
+    \vspace{.3mm}
+    \small
+    \entitle
+    \end{flushleft}
+    \vspace{2.8mm}
+}
+\preauthor{%
+    \begin{flushleft}
+    \large
+}
+
+\postauthor{%
+    \end{flushleft}
+    % \vspace{-2mm}
+    % \vspace{-5mm}
+}
+
+% document 
+% section labels
+% format: \titleformat{command}[shape]{format}{label}{sep}{before-code}[after-code]
+
+\titleformat{name=\section}[block]{
+    \rmfamily
+    \Large
+    \ltjsetparameter{
+        kanjiskip=1mm plus .3mm minus .1mm}
+}{\thesection}{2em}{\formatsectiontitle}
+
+\newcommand{\formatsectiontitle}[1]{%
+  \parbox[t]{\dimexpr\columnwidth-2em}{\raggedright#1}}
+
+
+\titleformat{name=\subsection}[block]{
+    \bfseries
+    \sffamily
+}{\thesubsection}{0em}{\vspace{-3mm}}
+\usepackage{indentfirst} % to compensate #8
+
+
+\renewpagestyle{plain}{%
+    \sethead{%
+        \includegraphics[height=2.4mm]{aiit_ja_long}
+    }{
+    }{%
+        \footnotesize
+        Advanced Institute of Industrial Technology Bulletin Vol \VOLUME
+    }
+    \setfoot{% left 
+        \footnotesize 
+        Received: \RECEIVEDDATE; Published online: 2023-mm-dd
+
+    }{% center
+        % \footnotesize
+        % DOI: 
+        % \href{https://doi.org/\doi}{\doi}
+    }{% right
+        % \footnotesize 
+        % \sffamily
+        % \bfseries
+        % \thepage
+    }
+}
+\newpagestyle{aiit}{%
+    \sethead{%
+        \includegraphics[height=2.4mm]{aiit_ja_long}
+    }{
+    }{%
+        \footnotesize
+        Advanced Institute of Industrial Technology Bulletin Vol \VOLUME
+    }
+    \setfoot{% left 
+        % \footnotesize
+        % DOI: 
+        % \href{https://doi.org/\doi}{\doi}
+    }{% center
+        % \footnotesize 
+        % Published 2023-10-27         
+
+    }{% right
+        % \footnotesize 
+        % \sffamily
+        % \bfseries
+        % \thepage
+    }
+}
+
+% hyperref (load last)
+
+\usepackage[luatex, pdfencoding=auto, colorlinks=true, allcolors=CadetBlue]{hyperref}
